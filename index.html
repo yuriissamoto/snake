@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+</head>
+<body>
+    <header class="canvasHeader">
+        <h1 class="canvasHeaderTitle">Snake</h1>
+        <div class="canvasheaderbody">
+            <h2 class="canvasHeaderTitle2">Inicie o Jogo usando as teclas de direção</h2>
+            <p id="scoreDisplay">Score: 0</p>
+        </div>
+
+    </header>
+    <main>
+        <div class="canvasBory">
+            <canvas id="board"></canvas>
+            <div class="controls">
+                <div>
+                    <button class="control-button" id="upButton"><i class="fas fa-arrow-up"></i></button>
+                </div>
+                <div>
+                    <button class="control-button" id="leftButton"><i class="fas fa-arrow-left"></i></button>
+                    <button class="control-button" id="downButton"><i class="fas fa-arrow-down"></i></button>
+                    <button class="control-button" id="rightButton"><i class="fas fa-arrow-right"></i></button>
+                </div>                
+            </div>
+            <script src="js/snake.js"></script>
+        </div>
+
+    </main>
+
+    
+</body>
+</html>

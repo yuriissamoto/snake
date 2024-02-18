@@ -1,0 +1,73 @@
+canvas {
+    border: 1px solid black;
+    
+}
+
+.canvasHeader {
+    background: #82b6db;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+}
+
+.canvasheaderbody {
+    display: flex;
+    flex-direction: column;
+}
+
+.canvasHeaderTitle {
+    font-size: 1.8em;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    height: 10%;
+    color: rgb(25, 23, 61);
+}
+
+.canvasHeaderTitle2 {
+    height: 10%;
+    font-size: 1.5em;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.canvasBory {
+    background: #173245;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 10px;
+}
+.control-button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: rgb(77, 145, 209);
+}
+
+#scoreDisplay {
+    /* position: absolute;
+    top: 20px;
+    left: 20px; */
+    font-family: 'Exo', sans-serif;
+    font-size: 1.5em;
+}
