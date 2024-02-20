@@ -41,8 +41,9 @@ canvas {
 
 .canvasp {
     font-size: 1em;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Roboto', sans-serif;
     text-align: start;
+    font-weight: bold; /* Adicionando negrito */
 }
 
 .canvasBory {
@@ -78,7 +79,7 @@ body {
     top: 20px;
     left: 20px; */
     color: #081b28;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     text-align: center;
     font-weight: bold; /* Adicionando negrito */
@@ -86,19 +87,19 @@ body {
 
 @media (max-width: 768px) {
     #scoreDisplay {
-        font-size: 1em;
+        font-size: 1.1em;
     }
 
     .canvasHeaderTitle {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     
     .canvasHeaderTitle2 {
-        font-size: 1em;
+        font-size: 1.1em;
     }
     
     .canvasp {
-        font-size: 0.9em;
+        font-size: 1em;
     }
     
 }
