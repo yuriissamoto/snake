@@ -155,3 +155,42 @@ if (snakeX == foodX && snakeY == foodY) {
     score += 10; // Incrementar a pontuação
     drawScore(); // Atualizar a pontuação na tela
 }
+
+
+// Adicionar event listener para cliques na janela inteira
+window.addEventListener('click', handleClick, false);
+
+// Função para lidar com o clique na janela inteira
+function handleClick(event) {
+    event.preventDefault();
+    // Obter as coordenadas do clique em relação à posição da área do tabuleiro
+    var rect = board.getBoundingClientRect();
+    var clickX = event.clientX - rect.left;
+    var clickY = event.clientY - rect.top;
+    // Calcular a posição do centro da cabeça da cobra
+    var centerX = snakeX + blockSize / 2;
+    var centerY = snakeY + blockSize / 2;
+    // Calcular a diferença entre as coordenadas do clique e do centro da cabeça da cobra
+    var deltaX = clickX - centerX;
+    var deltaY = clickY - centerY;
+    // Determinar a direção do movimento com base na diferença entre as coordenadas do clique e do centro da cabeça da cobra
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+        // Movimento horizontal
+        if (deltaX > 0 && velocityX !== -1) {
+            velocityX = 1;
+            velocityY = 0;
+        } else if (deltaX < 0 && velocityX !== 1) {
+            velocityX = -1;
+            velocityY = 0;
+        }
+    } else {
+        // Movimento vertical
+        if (deltaY > 0 && velocityY !== -1) {
+            velocityX = 0;
+            velocityY = 1;
+        } else if (deltaY < 0 && velocityY !== 1) {
+            velocityX = 0;
+            velocityY = -1;
+        }
+    }
+}
