@@ -118,9 +118,8 @@ function changeDirection(e) {
 
 
 function placeFood() {
-    //(0-1) * cols -> (0-19.9999) -> (0-19) * 25
-    foodX = Math.floor(Math.random() * cols) * blockSize;
-    foodY = Math.floor(Math.random() * rows) * blockSize;
+    foodX = Math.floor(Math.random() * (cols - 1)) * blockSize; // Ajuste para garantir que a maçã não apareça na última coluna do canvas
+    foodY = Math.floor(Math.random() * (rows - 1)) * blockSize; // Ajuste para garantir que a maçã não apareça na última linha do canvas
 }
 // Adicionar event listeners para os botões de controle
 document.getElementById('upButton').addEventListener('click', function() {
